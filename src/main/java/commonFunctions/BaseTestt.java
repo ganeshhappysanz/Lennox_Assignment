@@ -12,6 +12,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 public class BaseTestt {
+
 public static WebDriver driver;
 String ApppURL="https://www.liidaveqa.com/login";
 
@@ -43,7 +44,7 @@ String ApppURL="https://www.liidaveqa.com/login";
 	@AfterSuite
 	public void teardown() {
 		if(driver!=null) {
-            //driver.quit();
+            driver.quit();
         }
 	}
 	
