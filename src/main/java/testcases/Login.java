@@ -24,7 +24,7 @@ public class Login extends BaseTestt{
 		LoginPage.Login_link.click();
 		Thread.sleep(5000);
 		
-		File src=new File("C:/Users/Ganesh/eclipse-workspace/Assignment_Test/TestData/TestData.xls");
+		File src=new File("C:\\Users\\Ganesh\\git\\Lennox_Assignment\\TestData\\TestData.xls");
 		Workbook wb=Workbook.getWorkbook(src);
 		String UserName=wb.getSheet(0).getCell(0, 0).getContents();
 		String Password=wb.getSheet(0).getCell(1, 0).getContents();

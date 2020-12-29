@@ -6,6 +6,7 @@
       <class name="testcases.Login">
         <methods>
           <include name="Login_Test"/>
+          <include name="teardown"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testcases.Login -->
