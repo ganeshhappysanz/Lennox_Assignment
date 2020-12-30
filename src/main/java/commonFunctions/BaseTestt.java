@@ -11,6 +11,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTestt {
 
 public static WebDriver driver;
@@ -19,10 +21,11 @@ String ApppURL="https://www.liidaveqa.com/login";
 	
 	@BeforeSuite
 	public void setup() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Ganesh\\eclipse-workspace\\Assignment_Test\\Drivers\\geckodriver.exe");
+		//System.setProperty("webdriver.gecko.driver", "C:\\Users\\Ganesh\\eclipse-workspace\\Assignment_Test\\Drivers\\geckodriver.exe");
+		WebDriverManager.firefoxdriver().setup();
+		driver = new FirefoxDriver();
 		FirefoxOptions option=new FirefoxOptions();
 		option.addArguments("--disable notifications");
-		driver=new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.MILLISECONDS);
 		driver.get(ApppURL);
 		
