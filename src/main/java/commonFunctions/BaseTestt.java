@@ -21,7 +21,7 @@ String ApppURL="https://www.liidaveqa.com/login";
 	
 	@BeforeSuite
 	public void setup() {
-		//System.setProperty("webdriver.gecko.driver", "C:\\Users\\Ganesh\\eclipse-workspace\\Assignment_Test\\Drivers\\geckodriver.exe");
+		
 		WebDriverManager.firefoxdriver().setup();
 		driver = new FirefoxDriver();
 		FirefoxOptions option=new FirefoxOptions();
